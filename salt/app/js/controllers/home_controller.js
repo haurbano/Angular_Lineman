@@ -40,7 +40,8 @@ app.filter('decorar', function(){
 
 app.directive('myClient',function(){
 	return {
-		template: "Nombre: {{user.name}} Edad: {{user.edad}}"
+		<!--template: "Nombre: {{user.name}} Edad: {{user.edad}}"-->
+		templateUrl: 'my-client.html'
 	};
 });
 
