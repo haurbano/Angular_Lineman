@@ -19,6 +19,8 @@ var app = angular.module("app").controller('HomeController', function($scope, $l
   				   {name:'Hugo',prof:'Medico',age:'25'},
   				   {name:'Diana',prof:'Ingeniero',age:'268'}];
 
+  $scope.opt= ['name','prof','age'];
+
   $scope.lista = ['Perro','Gato','Mono','Vaca'];
   
   $scope.addUser = function(u){
