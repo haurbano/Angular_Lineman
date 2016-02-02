@@ -26,7 +26,7 @@ var app = angular.module("app").controller('HomeController', function($scope, $l
   	$scope.users.push(nu);
 
   };
-
+  
 });
 
 app.filter('decorar', function(){
@@ -37,3 +37,4 @@ app.filter('decorar', function(){
 	
 	return decorar1;
 });
+
