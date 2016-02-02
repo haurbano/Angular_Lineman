@@ -48,11 +48,11 @@
       </div>
 
       <div>
-        <h1>Form Basico</h1>
-          <form>
-            Nombre: <input ng-model="useradd.name" type="text"/><br/>
-            Profesion: <input ng-model="useradd.prof" type="text"/><br/>
-            Edad: <input ng-model="useradd.age" type="text"><br/>
+        <h1 >Form Basico</h1>
+          <form class="formbasico" nonvalidate>
+            Nombre: <input ng-model="useradd.name" type="text" required/><br/>
+            Profesion: <input ng-model="useradd.prof" type="text"/><br required/>
+            Edad: <input ng-model="useradd.age" type="number" required min="18" max="50"><br/>
             <input type="submit" value="Agregar" ng-click="addUser(useradd)"/>
           </form>
 
