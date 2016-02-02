@@ -1,0 +1,49 @@
+<div id="home" class="row">
+  <div class="large-6 large-offset-3">
+    <h2>Welcome to the {{ title }} page!</h2>
+
+    <div class="alert-box">{{ message }}</div>
+
+    <ul class="small-block-grid-2">
+      <li>
+        <img class="th" src="img/demo1.jpg" shows-message-when-hovered message="Im the first house.">
+      </li>
+      <li>
+        <img class="th" src="img/demo2.jpg" shows-message-when-hovered message="Im the second house.">
+      </li>
+    </ul>
+
+    <div class="row">
+      <div class="large-12 columns">
+        <button ng-click="logout()" class="button large expand radius">Log Out</button>
+      </div>
+
+      <div>
+        <h1>{{a + b}}</h1>
+        Nombre: <h2>{{user.name +' '+user.apellido}}</h2>
+        edad: <p>{{user.edad}}</p>
+      </div>
+
+      <div>
+      <h3>Lista de usuarios</h3>
+        <ol ng-repeat="u in users">
+          <li>{{u.prof +' '+u.name +' de '+u.age}}</li>
+        </ol>
+      </div>
+
+      <div>
+        <h2>Filtros</h2>
+        <ol ng-repeat="l in lista">
+          <li>{{l|uppercase|decorar}}</li>
+        </ol>
+        <h3>{{a|currency}}</h3>
+        <h3>{{users|json}}</h3>
+
+        <ol>
+          <li ng-repeat="us in users|orderBy:'name':true">{{us.name}}</li>
+        </ol>
+      </div>
+
+    </div>
+  </div>
+</div>
