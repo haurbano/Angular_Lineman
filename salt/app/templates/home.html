@@ -17,6 +17,9 @@
       <div class="large-12 columns">
         <button ng-click="logout()" class="button large expand radius">Log Out</button>
       </div>
+    </div>
+  </div>
+
 
       <div>
         <h1>{{a + b}}</h1>
@@ -44,6 +47,18 @@
         </ol>
       </div>
 
-    </div>
-  </div>
+      <div>
+        <h1>Form Basico</h1>
+          <form>
+            Nombre: <input ng-model="useradd.name" type="text"/><br/>
+            Profesion: <input ng-model="useradd.prof" type="text"/><br/>
+            Edad: <input ng-model="useradd.age" type="text"><br/>
+            <input type="submit" value="Agregar" ng-click="addUser(useradd)"/>
+          </form>
+
+          <ol ng-repeat="u in users">
+          <li>{{u.prof +' '+u.name +' de '+u.age}}</li>
+         </ol>
+      </div>
+
 </div>

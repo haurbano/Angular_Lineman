@@ -13,14 +13,19 @@ var app = angular.module("app").controller('HomeController', function($scope, $l
   $scope.a = 10;
   $scope.b = 15;
 
-  $scope.user= {name : 'Hamilton', edad: '20', apellido: 'Urbano'};
+  $scope.user= {name : 'HSamilton', edad: '20', apellido: 'Urbano'};
 
   $scope.users = [{name:'Hamilton', prof:'Ingeniero', age:'20'},
   				   {name:'Hugo',prof:'Medico',age:'25'},
-  				   {name:'Diana',prof:'Ingeniero',age:'26'}];
+  				   {name:'Diana',prof:'Ingeniero',age:'268'}];
 
   $scope.lista = ['Perro','Gato','Mono','Vaca'];
+  
+  $scope.addUser = function(u){
+  	var nu = {name: u.name, prof: u.prof, age : u.age};
+  	$scope.users.push(nu);
 
+  };
 
 });
 
